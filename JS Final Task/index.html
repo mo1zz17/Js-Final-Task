@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+let input = ["bat", "tap", "cat", "tab", "pat"];
+
+let ana = [];
+
+for (let i = 0; i < input.length; i++) {
+    let word1 = input[i];
+    let reversedWord1 = word1.split("").reverse().join("");
+    
+    for (let j = i + 1; j < input.length; j++) {
+        let word2 = input[j];
+        let reversedWord2 = word2.split("").reverse().join("");
+        
+        if (word1 === reversedWord2 || word2 === reversedWord1) {
+            ana.push([word1, word2]);
+        }
+    }
+}
+
+console.log(ana);
+
+    </script>
+    
+</body>
+</html>
